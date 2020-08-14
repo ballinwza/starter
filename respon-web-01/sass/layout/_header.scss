@@ -1,0 +1,37 @@
+.header{
+    height: 95vh;
+    background-image: linear-gradient(
+        to right bottom,rgba($color-primary-light,0.9), rgba($color-primary-dark,0.8)), url(https://firebasestorage.googleapis.com/v0/b/profile-206f1.appspot.com/o/images%2Fbg-home.png?alt=media&token=70a422a0-6c6c-4874-b37c-84fe3c916806);
+    background-size: 100%;
+    background-position: top;
+    position: relative;
+
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+
+    @include respond(phone) {
+        height: 80vh;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    }
+
+    &__logo-box {
+        position: absolute;
+        top: .5rem;
+        left: .5rem;
+    }
+
+    &__logo{
+        height: 15rem;
+        width: 19.5rem;
+    }
+
+    &__text-box{
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 80%;
+    }
+}
